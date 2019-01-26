@@ -51,24 +51,17 @@ class Layout extends React.Component {
         </h3>
       )
     }
-    return (
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
+    return <div style={{ marginLeft: `auto`, marginRight: `auto`, maxWidth: rhythm(24), padding: `${rhythm(1.5)} ${rhythm(3 / 4)}` }}>
         {header}
         {children}
         <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          © {new Date().getFullYear()}
+          , Created with {` `}
+          <a href="https://www.gatsbyjs.org">Gatsby </a>, Built with ❤︎ {` `}
+          <a href="https://www.codeship.com">CodeShip</a>, Hosted at {` `}
+          <a href="https://www.github.com">Github</a>
         </footer>
       </div>
-    )
   }
 }
 
