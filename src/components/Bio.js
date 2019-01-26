@@ -10,35 +10,28 @@ function Bio() {
       query={bioQuery}
       render={data => {
         const { author, social } = data.site.siteMetadata
-        return (
-          <div
-            style={{
-              display: `flex`,
-              marginBottom: rhythm(2.5),
-            }}
-          >
-            <Image
-              fixed={data.avatar.childImageSharp.fixed}
-              alt={author}
-              style={{
-                marginRight: rhythm(1 / 2),
-                marginBottom: 0,
-                minWidth: 50,
-                borderRadius: `100%`,
-              }}
-              imgStyle={{
-                borderRadius: `50%`,
-              }}
-            />
+        return <div style={{ display: `flex`, marginBottom: rhythm(2.5) }}>
+            <Image fixed={data.avatar.childImageSharp.fixed} alt={author} style={{ marginRight: rhythm(1 / 2), marginBottom: 0, minWidth: 50, borderRadius: `100%` }} imgStyle={{ borderRadius: `50%` }} />
             <p>
-              Written by <strong>{author}</strong> who lives and works in Gurgaon building useful things.
+              Written by <strong>{author}</strong>. Follow Me 
               {` `}
               <a href={`https://twitter.com/${social.twitter}`}>
-               Twitter
+                Twitter
+              </a>
+              {` `}
+              <a href={`https://linkedin.com/in/${social.linkedin}`}>
+                LinkedIn
+              </a>
+              {` `}
+              <a href={`https://github.com/${social.github}`}>
+              Github
+              </a>
+              {` `}
+              <a href={`https://facebook.com/${social.facebook}`}>
+                Facebook
               </a>
             </p>
           </div>
-        )
       }}
     />
   )
